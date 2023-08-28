@@ -1,24 +1,72 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Phone Sales!</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.2/dist/full.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
-          theme: {
-            extend: {
-              colors: {
-                clifford: '#FFFF',
-              }
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#FFFF',
+                    }
+                }
             }
-          }
         }
-      </script>
+    </script>
+    <style>
+        * {
+            font-family: 'Poppins', sans-serif;
+        }
+       .s1{
+        display: none;
+       }
+       .s2{
+        display: ;
+       }
+    </style>
 </head>
+
 <body>
-    
+    <header class="w-screen h-screen bg-[#0D6EFD0D]">
+        <!-- Nav ber section -->
+        <section class="w-full h-[10%] flex justify-between items-center">
+            <div class="px-2 md:px-16">
+                <h3 class="text-2xl font-semibold">Hot Gadgets</h3>
+            </div>
+            <div class="px-2 md:px-16">
+                <button class="btn btn-active btn-accent text-white">Sign Up</button>
+            </div>
+        </section>
+        <!-- content Part -->
+        <section class="w-full h-[35%] text-center space-y-2 md:space-y-7">
+            <h3 class="text-xl md:text-4xl font-bold pt-2 md:pt-5">Apple Iphone 13 Pro Max</h3>
+            <p class="text-sm md:text-xl">There are many variations of passages of Lorem Ipsum available, but the
+                majority <br> have suffered alteration in some form, by injected humou.</p>
+            <button class="btn btn-wide btn-info text-white">Buy Now</button>
+        </section>
+        <section class="w-full h-[55%] overflow-x-hidden">
+            <div class="w-full h-full flex justify-center items-center">
+                <img src="./pngwing 1.png" alt="" class="h-4/5 w-auto">
+                <img src="./pngwing 1.png" alt="" class="h-full w-auto">
+                <img src="./pngwing 1.png" alt="" class="h-4/5 w-auto">
+            </div>
+         
+        </section>
+    </header>
+    <main>
+
+    </main>
+    <footer>
+
+    </footer>
 </body>
+
 </html>
