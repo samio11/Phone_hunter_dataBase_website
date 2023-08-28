@@ -24,45 +24,43 @@
     <style>
         * {
             font-family: 'Poppins', sans-serif;
+
         }
-       .s1{
-        display: none;
-       }
-       .s2{
-        display: ;
-       }
     </style>
 </head>
 
 <body>
-    <header class="w-screen h-screen bg-[#0D6EFD0D]">
-        <!-- Nav ber section -->
-        <section class="w-full h-[10%] flex justify-between items-center">
-            <div class="px-2 md:px-16">
-                <h3 class="text-2xl font-semibold">Hot Gadgets</h3>
-            </div>
-            <div class="px-2 md:px-16">
-                <button class="btn btn-active btn-accent text-white">Sign Up</button>
-            </div>
-        </section>
-        <!-- content Part -->
-        <section class="w-full h-[35%] text-center space-y-2 md:space-y-7">
-            <h3 class="text-xl md:text-4xl font-bold pt-2 md:pt-5">Apple Iphone 13 Pro Max</h3>
-            <p class="text-sm md:text-xl">There are many variations of passages of Lorem Ipsum available, but the
+    <header class="container bg-[#0D6EFD0D]">
+        <div class="w-full flex justify-between items-center pt-5">
+            <h3 class="text-xl md:text-3xl font-semibold pl-5">Hot Gadgets</h3>
+            <button class="btn btn-info text-white mr-5">Sign Up</button>
+        </div>
+        <div class="w-full text-center pt-5 space-y-4">
+            <h3 class="text-xl md:text-4xl font-bold">Apple Iphone 13 Pro Max</h3>
+            <p class="text-xs md:text-xl">There are many variations of passages of Lorem Ipsum available, but the
                 majority <br> have suffered alteration in some form, by injected humou.</p>
             <button class="btn btn-wide btn-info text-white">Buy Now</button>
-        </section>
-        <section class="w-full h-[55%] overflow-x-hidden">
-            <div class="w-full h-full flex justify-center items-center">
-                <img src="./pngwing 1.png" alt="" class="h-4/5 w-auto">
-                <img src="./pngwing 1.png" alt="" class="h-full w-auto">
-                <img src="./pngwing 1.png" alt="" class="h-4/5 w-auto">
-            </div>
-         
-        </section>
+        </div>
+        <div class="w-full h-[40vh] md:h-[60vh] pt-5 flex justify-center items-center">
+            <img src="./pngwing 1.png" alt="" class="h-4/5">
+            <img src="./pngwing 1.png" alt="" class="h-full">
+            <img src="./pngwing 1.png" alt="" class="h-4/5">
+        </div>
     </header>
-    <main>
+    <main class="max-w-screen-xl mx-auto mt-5">
+        <div class="w-full h-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+            <div class="card bg-base-100 shadow-xl">
+                <figure><img src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
+                <div class="card-body">
+                  <h2 class="card-title">Shoes!</h2>
+                  <p>If a dog chews shoes whose shoes does he choose?</p>
+                  <div class="card-actions justify-end">
+                    <button class="btn btn-primary">Buy Now</button>
+                  </div>
+                </div>
+              </div>
 
+        </div>
     </main>
     <footer>
 
