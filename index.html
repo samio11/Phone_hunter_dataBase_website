@@ -48,23 +48,28 @@
         </div>
     </header>
     <main class="max-w-screen-xl mx-auto mt-5">
-        <div class="w-full h-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-            <div class="card bg-base-100 shadow-xl">
-                <figure><img src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
-                <div class="card-body">
-                  <h2 class="card-title">Shoes!</h2>
-                  <p>If a dog chews shoes whose shoes does he choose?</p>
-                  <div class="card-actions justify-end">
-                    <button class="btn btn-primary">Buy Now</button>
-                  </div>
-                </div>
-              </div>
-
+        <div class="w-full text-center mt-5">
+            <p class="text-xl md:text-2xl font-semibold mb-2">Search Your Product Here</p>
+            <input type="text" placeholder="Search Brand of Phone" id="input" class="input input-bordered input-info w-full max-w-xs" />
+            <button onclick="search()" class="btn btn-info text-white mt-4 lg:mt-0">Search</button>
+        </div>
+        <!-- spinner -->
+        <div class="text-center hidden mt-5" id="spin">
+            <span class="loading loading-spinner text-accent"></span>
+        </div>
+        <!-- card box -->
+        <div class="w-full h-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 mt-5" id="main_card_container">
+            <!-- <span class="loading loading-spinner text-accent hidden" id="load_spin"></span> -->
+        </div>
+        <!-- load more button -->
+        <div class="hidden text-center mb-5" id="load">
+            <button onclick="showLoad()" class="btn btn-success text-white mt-5">Load More</button>
         </div>
     </main>
     <footer>
 
     </footer>
+    <script src="./data.js"></script>
 </body>
 
 </html>
