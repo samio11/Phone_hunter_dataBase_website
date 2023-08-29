@@ -35,7 +35,7 @@ let gettingValue = (data,ispass) =>{
                     <h2 class="text-center font-bold">${element.phone_name}</h2>
                     <p>The Best Product!!</p>
                     <div class="card-actions justify-end">
-                        <button class="btn btn-primary">Buy Now</button>
+                        <button onclick="modalBtn('${element.slug}')" class="btn btn-primary">Buy Now</button>
                     </div>
                 </div>
             </div>
@@ -64,4 +64,32 @@ let toggle = (isload) =>{
 
 function showLoad(){
     search(true)
+}
+
+// for getting value of another database
+let modalBtn =async (id) =>{
+    let url = await fetch(`https://openapi.programming-hero.com/api/phone/${id}`)
+    let data1 = await url.json();
+    let data2 = data1.data;
+    mainWork(data2);
+}
+
+let mainWork = data2 =>{
+    console.log(data2)
+    let container = document.getElementById('main_modal_box');
+    container.textContent= '';
+    let div = document.createElement('div')
+    div.innerHTML=`
+    <div class="flex justify-center">
+    <img src="${data2.image}">
+    </div>
+     <p>Storage:- ${data2.mainFeatures.storage}</p>
+     <p>Display:- ${data2.mainFeatures.displaySize}</p>
+     <p>Chipset:- ${data2.mainFeatures.chipSet}</p>
+     <p>Memory:- ${data2.mainFeatures.memory}</p>
+     <p>Phone Sensor:- ${data2.mainFeatures.sensors.map(x => x)}</p>
+     <p>Phone Release Date:-${data2.releaseDate}</p>
+    `;
+    container.appendChild(div)
+    my_modal_info.showModal()
 }
